@@ -305,3 +305,118 @@ conjugacy class has at most $n$ elements.
   $\ord{G : C_G(g)}\leq n$. By Proposition~6, we know that the
   conjugacy class containing $g$ has at most $n$ elements.
 \end{proof}
+
+\Exercise6 Assume $G$ is a non-abelian group of order $15$. Prove that
+$Z(G) = 1$. Use the fact that $\gen{g} \leq C_G(g)$ for all $g\in G$
+to show that there is at most one possible class equation for $G$.
+\begin{proof}
+  Suppose $Z(G)$ has a nontrivial element. Since $G$ is non-abelian
+  and $Z(G)\leq G$, we must either have $\ord{Z(G)} = 3$ or
+  $\ord{Z(G)} = 5$. In either case, $Z(G)$ has prime index, and
+  therefore the quotient $G/Z(G)$ must be cyclic. By
+  Exercise~\ref{exercise:quotient-group:center-quotient-cyclic}, $G$
+  is abelian. This is a contradiction, so $Z(G)$ must be trivial.
+
+  Next, since $G$ cannot be cyclic and has a trivial center, any
+  non-identity element must have order $3$ or $5$, so its centralizer
+  must have an index of $3$ or $5$. By Proposition~6, we see that the
+  only possible class equation for $G$ is
+  \begin{equation*}
+    \ord{G} = 1 + 3 + 3 + 3 + 5,
+  \end{equation*}
+  since this is the only partition of $15$ with acceptable values.
+\end{proof}
+
+\Exercise7 For $n = 3$, $4$, $6$ and $7$ make lists of the partitions
+of $n$ and give representatives for the corresponding conjugacy
+classes of $S_n$.
+\begin{solution}
+  Proposition~11 and its proof shows how to form a correspondence
+  between the possible cycle types of elements in $S_n$ and the
+  conjugacy classes of $S_n$. For example, with $n = 3$ the possible
+  partitions are $1, 1, 1$; $1, 2$; or $3$. And each of these
+  corresponds to a distinct conjugacy class containing elements with
+  the same cycle type:
+  \begin{center}
+    \begin{tabular}{r|l}
+      \bf Partition of 3 & \bf Representative of Conjugacy Class \\
+      \hline
+      $1, 1, 1$ & $1$ \\
+      $1, 2$ & $(1\,2)$ \\
+      $3$ & $(1\,2\,3)$
+    \end{tabular}
+  \end{center}
+
+  For $n = 4$ we get five partitions, corresponding to five conjugacy
+  classes:
+  \begin{center}
+    \begin{tabular}{r|l}
+      \bf Partition of 4 & \bf Representative of Conjugacy Class \\
+      \hline
+      $1, 1, 1, 1$ & $1$ \\
+      $1, 1, 2$ & $(1\,2)$ \\
+      $1, 3$ & $(1\,2\,3)$ \\
+      $2, 2$ & $(1\,2)(3\,4)$ \\
+      $4$ & $(1\,2\,3\,4)$
+    \end{tabular}
+  \end{center}
+
+  For $n = 6$, we have $11$ classes:
+  \begin{center}
+    \begin{tabular}{r|l}
+      \bf Partition of 6 & \bf Representative of Conjugacy Class \\
+      \hline
+      $1, 1, 1, 1, 1, 1$ & $1$ \\
+      $1, 1, 1, 1, 2$ & $(1\,2)$ \\
+      $1, 1, 1, 3$ & $(1\,2\,3)$ \\
+      $1, 1, 2, 2$ & $(1\,2)(3\,4)$ \\
+      $1, 1, 4$ & $(1\,2\,3\,4)$ \\
+      $1, 2, 3$ & $(1\,2)(3\,4\,5)$ \\
+      $1, 5$ & $(1\,2\,3\,4\,5)$ \\
+      $2, 2, 2$ & $(1\,2)(3\,4)(5\,6)$ \\
+      $2, 4$ & $(1\,2)(3\,4\,5\,6)$ \\
+      $3, 3$ & $(1\,2\,3)(4\,5\,6)$ \\
+      $6$ & $(1\,2\,3\,4\,5\,6)$
+    \end{tabular}
+  \end{center}
+
+  Finally, for $n = 7$ we get $15$ classes:
+  \begin{center}
+    \begin{tabular}{r|l}
+      \bf Partition of 7 & \bf Representative of Conjugacy Class \\
+      \hline
+      $1, 1, 1, 1, 1, 1, 1$ & $1$ \\
+      $1, 1, 1, 1, 1, 2$ & $(1\,2)$ \\
+      $1, 1, 1, 1, 3$ & $(1\,2\,3)$ \\
+      $1, 1, 1, 2, 2$ & $(1\,2)(3\,4)$ \\
+      $1, 1, 1, 4$ & $(1\,2\,3\,4)$ \\
+      $1, 1, 2, 3$ & $(1\,2)(3\,4\,5)$ \\
+      $1, 1, 5$ & $(1\,2\,3\,4\,5)$ \\
+      $1, 2, 2, 2$ & $(1\,2)(3\,4)(5\,6)$ \\
+      $1, 2, 4$ & $(1\,2)(3\,4\,5\,6)$ \\
+      $1, 3, 3$ & $(1\,2\,3)(4\,5\,6)$ \\
+      $1, 6$ & $(1\,2\,3\,4\,5\,6)$ \\
+      $2, 2, 3$ & $(1\,2)(3\,4)(5\,6\,7)$ \\
+      $2, 5$ & $(1\,2)(3\,4\,5\,6\,7)$ \\
+      $3, 4$ & $(1\,2\,3)(4\,5\,6\,7)$ \\
+      $7$ & $(1\,2\,3\,4\,5\,6\,7)$
+    \end{tabular}
+  \end{center}
+\end{solution}
+
+\Exercise8 Prove that $Z(S_n) = 1$ for all $n\geq3$.
+\begin{proof}
+  Fix $n\geq3$ and let $\sigma$ be any nonidentity element of
+  $S_n$. Since $\sigma$ is not the identity, we must have
+  $\sigma(i) = j$ for some $i, j\in\Z^+$ with $i\neq j$.
+
+  Now choose a positive integer $k$ with $1\leq k\leq n$ and such that
+  $k$ is distinct from $i$ and $j$. Consider the $2$-cycle
+  $\tau = (k\;j)$. Observe that
+  \begin{equation*}
+    (\sigma\tau)(i) = j, \quad\text{but}\quad (\tau\sigma)(i) = k.
+  \end{equation*}
+  This shows that $\tau$ does not commute with $\sigma$, so $\sigma$
+  cannot be in $Z(S_n)$. In particular, since $\sigma$ was chosen
+  arbitrarily, this implies that $Z(S_n)$ is trivial.
+\end{proof}
